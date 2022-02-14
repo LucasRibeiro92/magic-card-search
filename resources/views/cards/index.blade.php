@@ -14,7 +14,9 @@
                             @endif
                             <div class="card-body">
                                 <h5 class="card-title">{{ $card->name }}</h5>
-                                <p class="card-text">{{ $card->text }}</p>
+                                @isset($card->text)
+                                    <p class="card-text">{{ $card->text }}</p>
+                                @endisset
                             </div>
                         </div>
                     </div>
